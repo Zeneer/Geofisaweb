@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-echo "Building static files..."
-python manage.py collectstatic --noinput
+pip install --upgrade pip
+pip install -r requirements.txt
+python manage.py collectstatic --noinput'
