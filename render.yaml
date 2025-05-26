@@ -2,6 +2,7 @@ services:
   - type: web
     name: geofisa
     env: python
-    buildCommand: pip install -r requirements.txt
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py collectstatic --noinput
     startCommand: gunicorn geofisa_site.wsgi:application
-    staticPublishPath: staticfiles
