@@ -1,0 +1,243 @@
+/* Variables de color */
+:root {
+    --primary: #1b8f8a;
+    --primary-light: #e0f7f4;
+    --primary-dark: #0d6e69;
+    --secondary: #ffc107;
+    --secondary-dark: #e0a800;
+    --dark: #1e1e1e;
+    --light: #f9fafb;
+    --gray: #6b7280;
+    --gray-light: #e5e7eb;
+}
+
+/* Reset y estilos base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header hero */
+.hero {
+    background: linear-gradient(135deg, var(--primary-light) 0%, #cce8ff 100%);
+    padding: 4rem 1rem 6rem;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.logo {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.tagline {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.services {
+    font-size: 1.2rem;
+    color: var(--gray);
+    font-weight: 400;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Wave divider */
+.wave-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+}
+
+/* Main content */
+.container {
+    padding: 2rem 1rem;
+    position: relative;
+    z-index: 1;
+    margin-top: -3rem;
+}
+
+/* Custom card */
+.card-custom {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    border: 1px solid var(--gray-light);
+}
+
+.card-icon {
+    margin-bottom: 1.5rem;
+}
+
+.card-custom h2 {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.card-custom p {
+    color: var(--gray);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* Download button */
+.download-btn {
+    background-color: var(--secondary);
+    color: var(--dark);
+    font-weight: 600;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    transition: all 0.3s ease;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.download-btn:hover {
+    background-color: var(--secondary-dark);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.download-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.download-btn:hover svg {
+    transform: translateY(2px);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark);
+    color: white;
+    padding: 3rem 0 1.5rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-brand {
+    text-align: center;
+}
+
+.footer-logo {
+    max-width: 150px;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.footer-brand p {
+    color: var(--gray-light);
+    font-size: 0.9rem;
+}
+
+.footer-contact {
+    text-align: center;
+}
+
+.footer-contact p {
+    margin-bottom: 0.5rem;
+    color: var(--gray-light);
+}
+
+.footer-contact p:first-child {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--gray-light);
+    font-size: 0.85rem;
+}
+
+/* Animaciones */
+.animate__animated {
+    animation-duration: 1s;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .hero {
+        padding: 5rem 1rem 8rem;
+    }
+    
+    .tagline {
+        font-size: 2.8rem;
+    }
+    
+    .services {
+        font-size: 1.3rem;
+    }
+    
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1000px;
+        margin: 0 auto 2rem;
+    }
+    
+    .footer-brand, .footer-contact {
+        text-align: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .tagline {
+        font-size: 3.2rem;
+    }
+}
