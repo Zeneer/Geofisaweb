@@ -502,7 +502,7 @@
     transform: rotateY(180deg);
   }
 </style>
-
+  <!-- expertise -->
 <section class="expertise-banner py-5" style="background-color: #f8fbfb; border-top: 3px solid #1b8f8a; border-bottom: 3px solid #1b8f8a;">
   <div class="container">
     <div class="row align-items-center">
@@ -538,18 +538,58 @@
 </section>
 
   <!-- PORTAFOLIO -->
-  <section id="portafolio" class="py-5">
-    <div class="container">
-      <div class="card-custom text-center p-4 p-md-5">
-        <h2 class="mb-3">Portafolio de Servicios</h2>
-        <p class="lead mb-4">Descubre nuestra amplia gama de servicios profesionales en el sector de geociencias.</p>
-        <a href="{% static 'files/Portafolio_GEOFISA.pptx' %}" class="btn btn-primary btn-lg px-4 py-2" download>
-          <i class="bi bi-download me-2"></i> Descargar Portafolio (.pptx)
-        </a>
+<section class="portfolio-section py-5" style="background-color: #f5f9f9;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <!-- Título y descripción -->
+        <h2 class="mb-4" style="color: #0d6e69; border-bottom: 2px solid #1b8f8a; display: inline-block; padding-bottom: 5px;">
+          Portafolio de Servicios
+        </h2>
+        <p class="lead mb-5" style="color: #3a3a3a;">
+          Descubre nuestra amplia gama de servicios profesionales en el sector de geociencias.
+        </p>
+        
+        <!-- Tarjeta de portafolio -->
+        <div class="portfolio-card p-4 mb-5" style="background-color: white; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 500px; margin: 0 auto;">
+          <div class="d-flex align-items-center mb-3">
+            <i class="bi bi-file-earmark-ppt-fill fs-2 me-3" style="color: #d24625;"></i>
+            <div>
+              <h5 style="color: #0d6e69; margin-bottom: 0.2rem;">Catálogo de Servicios</h5>
+              <p class="small text-muted">Presentación PowerPoint (.pptx)</p>
+            </div>
+          </div>
+          
+          <!-- Checkbox y botón de descarga -->
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="downloadCheck">
+            <label class="form-check-label small" for="downloadCheck">
+              He leído y acepto los términos de uso
+            </label>
+          </div>
+          <a href="portafolio-geofisa.pptx" class="btn btn-success w-100 py-2" download>
+            <i class="bi bi-download me-2"></i> Descargar Portafolio
+          </a>
+        </div>
+        
+        <!-- Sección de contacto -->
+        <div class="contact-info mt-5 pt-4" style="border-top: 1px solid #dee2e6;">
+          <h5 class="mb-3" style="color: #0d6e69;">Contacto</h5>
+          <div class="d-flex flex-column flex-md-row justify-content-center gap-4">
+            <a href="mailto:contacto@geofisa.com" class="text-decoration-none">
+              <i class="bi bi-envelope-fill me-2" style="color: #1b8f8a;"></i>
+              contacto@geofisa.com
+            </a>
+            <a href="tel:8119826625" class="text-decoration-none">
+              <i class="bi bi-telephone-fill me-2" style="color: #1b8f8a;"></i>
+              811 982 6625
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
-</main>
+  </div>
+</section>
 
 <!-- CONTACTO -->
 <section id="contacto" class="py-5 bg-dark text-white">
@@ -640,6 +680,14 @@ window.addEventListener('scroll', function() {
   const navbar = document.querySelector('.navbar');
   navbar.classList.toggle('navbar-scrolled', window.scrollY > 50);
 });
+
+document.querySelector('.btn-success').addEventListener('click', function(e) {
+  if(!document.getElementById('downloadCheck').checked) {
+    e.preventDefault();
+    alert('Por favor acepte los términos de uso antes de descargar');
+  }
+});
+
 </script>
 
 </body>
