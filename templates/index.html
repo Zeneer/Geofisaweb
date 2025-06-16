@@ -20,7 +20,7 @@
 <nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
   <div class="container">
     <a class="navbar-brand" href="#inicio">
-      <img src="{% static 'images/logo_geofisa.png' %}" alt="Logo" height="40">
+      <img src="{% static 'images/logo_geofisa.png' %}" alt="Logo" height="100">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
       <span class="navbar-toggler-icon"></span>
@@ -41,7 +41,7 @@
 <!-- HERO -->
 <header id="inicio" class="hero">
   <div class="hero-content">
-    <img src="{% static 'images/logo_geofisa.png' %}" alt="Logo GEOFISA" class="logo">
+    <img src="{% static 'images/logo_geofisa.png' %}" alt="Logo GEOFISA" class="logo" >
     <h1 class="tagline">Soluciones integrales en geociencias</h1>
     <p class="services">Geología · Geofísica · Hidrología · Minería · Estudios ambientales · Percepción remota</p>
   </div>
@@ -180,7 +180,7 @@
 
     <!-- Filtros -->
 <!-- Botones de Filtro Mejorados -->
-<div class="text-center mb-5">
+<!--<div class="text-center mb-5">
   <div class="btn-group" role="group">
     <button type="button" 
             class="btn btn-filter active" 
@@ -219,7 +219,7 @@
   .btn-filter:hover:not(.active) {
     background-color: #e9ecef !important;
   }
-</style>
+</style>-->
 
     <!-- Tarjetas Giratorias -->
     <div class="row g-4">
@@ -538,7 +538,7 @@
   </div>
 </section>
 
-  <!-- PORTAFOLIO -->
+ <!-- PORTAFOLIO -->
 <section id="portafolio"class="portfolio-section py-5" style="background-color: #f5f9f9;">
   <div class="container">
     <div class="row justify-content-center">
@@ -568,29 +568,11 @@
               He leído y acepto los términos de uso
             </label>
           </div>
-          <a href="portafolio-geofisa.pptx" class="btn btn-success w-100 py-2" download>
+           <a href="{% static 'files/Portafolio_GEOFISA.pptx' %}" class="btn btn-success w-100 py-2" download>
             <i class="bi bi-download me-2"></i> Descargar Portafolio
           </a>
         </div>
-        
-        <!-- Sección de contacto -->
-        <div class="contact-info mt-5 pt-4" style="border-top: 1px solid #dee2e6;">
-          <h5 class="mb-3" style="color: #0d6e69;">Contacto</h5>
-          <div class="d-flex flex-column flex-md-row justify-content-center gap-4">
-            <a href="mailto:contacto@geofisa.com" class="text-decoration-none">
-              <i class="bi bi-envelope-fill me-2" style="color: #1b8f8a;"></i>
-              contacto@geofisa.com
-            </a>
-            <a href="tel:8119826625" class="text-decoration-none">
-              <i class="bi bi-telephone-fill me-2" style="color: #1b8f8a;"></i>
-              811 982 6625
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+</main>
 
 <!-- CONTACTO -->
 <section id="contacto" class="py-5 bg-dark text-white">
@@ -627,6 +609,8 @@
     </div>
   </div>
 </footer>
+
+
 
 <!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
