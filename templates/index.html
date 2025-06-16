@@ -166,61 +166,171 @@
   </div>
 </section>
 
-  <!-- SERVICIOS -->
-  <section id="servicios" class="py-5 section-card">
-    <div class="card-custom">
-      <h2 class="text-center mb-4">Nuestros Servicios</h2>
-      <p class="text-center mb-4">Soluciones especializadas en geociencias</p>
-
-      <!-- Filtros -->
-      <div class="text-center mb-4">
-        <div class="btn-group filter-buttons" role="group">
-          <button type="button" class="btn btn-outline-primary active">Todos</button>
-          <button type="button" class="btn btn-outline-primary">Geología</button>
-          <button type="button" class="btn btn-outline-primary">Geofísica</button>
-        </div>
+<!-- Sección Servicios con Tarjetas Giratorias -->
+<section id="servicios" class="py-5" style="background-color: #f9fafb;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold" style="color: #0d6e69;">Nuestros Servicios</h2>
+      <p class="lead" style="color: #1b8f8a;">Soluciones especializadas en geociencias</p>
+      <div class="d-flex justify-content-center">
+        <div style="width: 80px; height: 4px; background-color: #1b8f8a;"></div>
       </div>
+    </div>
 
-      <!-- Tarjetas -->
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <!-- Tarjeta Geología -->
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm service-card-original">
-            <div class="card-body text-center">
-              <i class="bi bi-geo-alt text-primary fs-1 mb-3"></i>
-              <h5>Geología</h5>
-              <ul class="list-unstyled text-start small mt-3">
-                <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Mecánica de rocas</li>
-                <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Análisis de peligros</li>
-                <li><i class="bi bi-check-circle text-primary me-2"></i>Cartografía geológica</li>
-              </ul>
+    <!-- Filtros -->
+<!-- Botones de Filtro Mejorados -->
+<div class="text-center mb-5">
+  <div class="btn-group" role="group">
+    <button type="button" 
+            class="btn btn-filter active" 
+            style="background-color: #f8f9fa; border-color: #dee2e6; color: #495057;">
+      Todos
+    </button>
+    <button type="button" 
+            class="btn btn-filter" 
+            style="background-color: #f8f9fa; border-color: #dee2e6; color: #495057;">
+      Geología
+    </button>
+    <button type="button" 
+            class="btn btn-filter" 
+            style="background-color: #f8f9fa; border-color: #dee2e6; color: #495057;">
+      Geofísica
+    </button>
+  </div>
+</div>
+
+<style>
+  /* Estilos para los botones de filtro */
+  .btn-filter {
+    transition: all 0.3s ease;
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.25rem !important;
+  }
+  
+  .btn-filter.active {
+    background-color: #e9ecef !important;
+    border-color: #ced4da !important;
+    color: #212529 !important;
+    font-weight: 600;
+  }
+  
+  .btn-filter:hover:not(.active) {
+    background-color: #e9ecef !important;
+  }
+</style>
+
+    <!-- Tarjetas Giratorias -->
+    <div class="row g-4">
+      <!-- Tarjeta Geología -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card" onclick="this.classList.toggle('flipped')">
+          <div class="service-card-inner">
+            <!-- Frente -->
+            <div class="service-card-front text-center p-4" style="background-color: #e0f7f4; border: 2px solid #1b8f8a;">
+              <i class="bi bi-geo-alt-fill fs-1 mb-3" style="color: #0d6e69;"></i>
+              <h3 style="color: #0d6e69;">Geología</h3>
+              <p class="small">Click para ver servicios</p>
             </div>
-            <div class="card-footer bg-transparent border-top-0">
-              <button class="btn btn-sm btn-outline-primary">Ver detalles</button>
+            <!-- Reverso -->
+            <div class="service-card-back p-4" style="background-color: white; border: 2px solid #1b8f8a;">
+              <h4 class="text-center mb-3" style="color: #0d6e69;">Servicios de Geología</h4>
+              <ul class="list-unstyled">
+                <li class="py-2"><i class="bi bi-check-circle-fill me-2" style="color: #1b8f8a;"></i> Mecánica de rocas</li>
+                <li class="py-2"><i class="bi bi-check-circle-fill me-2" style="color: #1b8f8a;"></i> Análisis de peligros</li>
+                <li class="py-2"><i class="bi bi-check-circle-fill me-2" style="color: #1b8f8a;"></i> Cartografía geológica</li>
+              </ul>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Tarjeta Geofísica -->
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm service-card-original">
-            <div class="card-body text-center">
-              <i class="bi bi-magnet text-primary fs-1 mb-3"></i>
-              <h5>Geofísica</h5>
-              <ul class="list-unstyled text-start small mt-3">
-                <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Tomografía sísmica</li>
-                <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Prospección magnética</li>
-                <li><i class="bi bi-check-circle text-primary me-2"></i>Estudios de resistividad</li>
+      <!-- Tarjeta Geofísica -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card" onclick="this.classList.toggle('flipped')">
+          <div class="service-card-inner">
+            <!-- Frente -->
+            <div class="service-card-front text-center p-4" style="background-color: #e0f7f4; border: 2px solid #1b8f8a;">
+              <i class="bi bi-magnet-fill fs-1 mb-3" style="color: #0d6e69;"></i>
+              <h3 style="color: #0d6e69;">Geofísica</h3>
+              <p class="small">Click para ver servicios</p>
+            </div>
+            <!-- Reverso -->
+            <div class="service-card-back p-4" style="background-color: white; border: 2px solid #1b8f8a;">
+              <h4 class="text-center mb-3" style="color: #0d6e69;">Servicios de Geofísica</h4>
+              <ul class="list-unstyled">
+                <li class="py-2"><i class="bi bi-check-circle-fill me-2" style="color: #1b8f8a;"></i> Tomografía sísmica</li>
+                <li class="py-2"><i class="bi bi-check-circle-fill me-2" style="color: #1b8f8a;"></i> Prospección magnética</li>
+                <li class="py-2"><i class="bi bi-check-circle-fill me-2" style="color: #1b8f8a;"></i> Estudios de resistividad</li>
               </ul>
             </div>
-            <div class="card-footer bg-transparent border-top-0">
-              <button class="btn btn-sm btn-outline-primary">Ver detalles</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta Hidrología -->
+      <div class="col-md-6 col-lg-4">
+        <div class="service-card" onclick="this.classList.toggle('flipped')">
+          <div class="service-card-inner">
+            <!-- Frente -->
+            <div class="service-card-front text-center p-4" style="background-color: #e0f7f4; border: 2px solid #1b8f8a;">
+              <i class="bi bi-droplet-fill fs-1 mb-3" style="color: #0d6e69;"></i>
+              <h3 style="color: #0d6e69;">Hidrología</h3>
+              <p class="small">Click para ver servicios</p>
+            </div>
+            <!-- Reverso -->
+            <div class="service-card-back p-4" style="background-color: white; border: 2px solid #1b8f8a;">
+              <h4 class="text-center mb-3" style="color: #0d6e69;">Servicios Hidrológicos</h4>
+              <ul class="list-unstyled">
+                <li class="py-2"><i class="bi bi-check-circle-fill me-2" style="color: #1b8f8a;"></i> Estudios hidrogeológicos</li>
+                <li class="py-2"><i class="bi bi-check-circle-fill me-2" style="color: #1b8f8a;"></i> Análisis de acuíferos</li>
+                <li class="py-2"><i class="bi bi-check-circle-fill me-2" style="color: #1b8f8a;"></i> Modelación hidráulica</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+ <!-- CSS DE LAS TARJETAS -->
+
+ <style>
+  /* Estilos para tarjetas giratorias */
+  .service-card {
+    perspective: 1000px;
+    height: 280px;
+    cursor: pointer;
+  }
+
+  .service-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .service-card.flipped .service-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .service-card-front, .service-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .service-card-back {
+    transform: rotateY(180deg);
+  }
+</style>
 
   <!-- EXPERTISE -->
   <section id="expertise" class="py-5 section-card bg-light">
@@ -285,21 +395,56 @@
 <!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-  // Navbar al hacer scroll
-  window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('navbar-scrolled', window.scrollY > 50);
-  });
-
-  // Filtrado de servicios
-  document.querySelectorAll('.filter-buttons .btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-      document.querySelectorAll('.filter-buttons .btn').forEach(b => {
-        b.classList.remove('active');
-      });
-      this.classList.add('active');
+// 1. Scroll suave (conservar)
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        const offset = 80;
+        const elementPosition = target.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+      }
     });
   });
+});
+
+// 2. Detección de sección activa (conservar)
+function activateCurrentSection() {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    if (window.scrollY >= sectionTop - 150) {
+      current = section.getAttribute('id');
+    }
+  });
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${current}`) {
+      link.classList.add('active');
+    }
+  });
+}
+
+// 3. Nuevo filtrado de servicios (usar este)
+document.querySelectorAll('.btn-group .btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.btn-group .btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    const filter = this.textContent.trim();
+    document.querySelectorAll('.service-card').forEach(card => {
+      card.style.display = (filter === 'Todos' || card.textContent.includes(filter)) ? 'block' : 'none';
+    });
+  });
+});
+
+// 4. Color navbar al hacer scroll (conservar)
+window.addEventListener('scroll', function() {
+  const navbar = document.querySelector('.navbar');
+  navbar.classList.toggle('navbar-scrolled', window.scrollY > 50);
+});
 </script>
 
 </body>
